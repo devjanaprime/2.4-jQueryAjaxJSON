@@ -1,7 +1,7 @@
 $( function() {
 
   $('#appendSomething').click( function(){
-    console.log( "asdf" );
+    console.log( "in appendSomething" );
     $('body').append( "<p>lorem ipsum or something</p>");
   }); // end append click
 
@@ -29,4 +29,22 @@ $( function() {
          } // end statusCode
        }); // end ajax  object
   }); // end click getJSONAjax button
+
+  $('#getJSONPAjax' ).click( function(){
+    console.log( 'button clicked' );
+     $.ajax({
+       url: './test.json',
+       dataType: 'jsonp',
+       success: function( data ){
+          console.log( 'in ajax success' );
+          console.log( data );
+         }, // end success
+       statusCode: {
+          404: function(){
+             alert( 'error connecting to server' );
+          } // end 404
+         } // end statusCode
+       }); // end ajax  object
+  }); // end click getJSONAjax button
+
 });
