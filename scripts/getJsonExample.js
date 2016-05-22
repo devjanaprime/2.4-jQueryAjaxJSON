@@ -33,7 +33,7 @@ $( function() {
   $('#getJSONPAjax' ).click( function(){
     console.log( 'button clicked' );
      $.ajax({
-       url: './test.json',
+       url: 'http://devjana.net/uncl/api',
        dataType: 'jsonp',
        success: function( data ){
           console.log( 'in ajax success' );
