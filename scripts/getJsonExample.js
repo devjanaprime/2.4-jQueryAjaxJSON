@@ -21,6 +21,9 @@ $( function() {
        success: function( data ){
           console.log( 'in ajax success' );
           console.log( data );
+          var dataString: String;
+          dataString = "<p>Name: " + data.name + "</p>";
+          $('body').append( dataString );
          }, // end success
        statusCode: {
           404: function(){
