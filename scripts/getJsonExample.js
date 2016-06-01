@@ -46,7 +46,7 @@ $( function() {
             console.log( 'in ajax jsonp success' );
             console.log( data );
             for( var i=0; i< data.response.docs.length; i++ ){
-              var dataString = "<p>: " + data.response.docs[i].identifier + "</p>";
+              var dataString = "<p>" + data.response.docs[i].identifier + "</p>";
               $('body').append( dataString );
             }
 
