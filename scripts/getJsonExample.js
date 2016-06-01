@@ -32,4 +32,25 @@ $( function() {
        }); // end ajax  object
   }); // end click getJSONAjax button
 
+  var callbacker = function(){
+    alert();
+  };
+
+    $('#getJSONpajax' ).click( function(){
+      console.log( 'getJSONpajax clicked' );
+      var searchString = 'https://archive.org/advancedsearch.php?q=' + $('#searchField').val() + '&output=json';
+       $.ajax({
+         url: searchString,
+         dataType: "jsonp",
+         success: function( data ){
+            console.log( 'in ajax jsonp success' );
+            console.log( data );
+           }, // end success
+         statusCode: {
+            404: function(){
+               alert( 'error connecting to server' );
+            } // end 404
+           } // end statusCode
+         }); // end ajax  object
+    }); // end click getJSONpAjax button
 });
