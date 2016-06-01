@@ -46,7 +46,7 @@ $( function() {
             console.log( 'in ajax jsonp success' );
             console.log( data );
             for( var i=0; i< data.response.docs.length; i++ ){
-              if( data.response.docs.mediaType == "movies"){
+              if( data.response.docs[i].mediatype == "movies"){
                 var newParagraph = document.createElement('p');
                 var newLink = document.createElement('a');
                 newLink.textContent = data.response.docs[i].title;
