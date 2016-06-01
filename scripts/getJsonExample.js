@@ -51,8 +51,8 @@ $( function() {
                 newLink.textContent = data.response.docs[i].title + '(' + data.response.docs[i].mediatype + ')';
                 newLink.href= "https://archive.org/details/" + data.response.docs[i].identifier;
                 newParagraph.appendChild( newLink );
-                $('body').empty() = '';
-                $('body').append( newParagraph );
+                $('outputSpace').empty() = '';
+                $('outputSpace').append( newParagraph );
             }
 
            }, // end success
