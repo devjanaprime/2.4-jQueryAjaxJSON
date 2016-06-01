@@ -52,7 +52,7 @@ $( function() {
                 newLink.textContent = data.response.docs[i].title + '(' + data.response.docs[i].mediatype + ')';
                 newLink.href= "https://archive.org/details/" + data.response.docs[i].identifier;
                 newParagraph.appendChild( newLink );
-                $('#outputSpace').append( newParagraph );
+                $('#outputSpace').appendChild( newParagraph );
             }
 
            }, // end success
