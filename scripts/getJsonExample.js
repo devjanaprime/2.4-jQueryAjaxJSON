@@ -49,7 +49,7 @@ $( function() {
               var newElement = document.createElement('a');
               newElement.textContent = data.response.docs[i].name;
               newElement.href= "https://archive.org/details/" + data.response.docs[i].identifier;
-              $('body').append( newElement );
+              $('body').appendChild( newElement );
             }
 
            }, // end success
