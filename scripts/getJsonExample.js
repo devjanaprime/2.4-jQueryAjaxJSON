@@ -57,7 +57,7 @@ $( function() {
 
       $('#getUnclJSON' ).click( function(){
         console.log( 'getJSONpajax clicked' );
-        var searchString = 'http://evjana.net/uncl/api';
+        var searchString = 'http://devjana.net/uncl/api';
          $.ajax({
            url: searchString,
            dataType: "jsonp",
