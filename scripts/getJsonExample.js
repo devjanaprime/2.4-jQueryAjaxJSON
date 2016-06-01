@@ -46,12 +46,14 @@ $( function() {
             console.log( 'in ajax jsonp success' );
             console.log( data );
             for( var i=0; i< data.response.docs.length; i++ ){
-              var newParagraph = document.createElement('p');
-              var newLink = document.createElement('a');
-              newLink.textContent = data.response.docs[i].title;
-              newLink.href= "https://archive.org/details/" + data.response.docs[i].identifier;
-              newParagraph.appendChild( newLink );
-              $('body').append( newParagraph );
+              if( data.response.docs.mediaType == "movies"){
+                var newParagraph = document.createElement('p');
+                var newLink = document.createElement('a');
+                newLink.textContent = data.response.docs[i].title;
+                newLink.href= "https://archive.org/details/" + data.response.docs[i].identifier;
+                newParagraph.appendChild( newLink );
+                $('body').append( newParagraph );
+              }
             }
 
            }, // end success
