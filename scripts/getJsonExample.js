@@ -53,4 +53,14 @@ $( function() {
            } // end statusCode
          }); // end ajax  object
     }); // end click getJSONpAjax button
+
+
+      $('#getUnclJSON' ).click( function(){
+        console.log( 'button clicked' );
+        $.getJSON('http://devjana.net/uncl/api', function(data){
+           console.log( 'in getJSON' );
+           console.log( data );
+        }); // end get JSON JQuery call
+      }); // end getJSON button click
+
 });
