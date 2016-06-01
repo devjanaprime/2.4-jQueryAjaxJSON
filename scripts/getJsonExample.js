@@ -57,7 +57,7 @@ $( function() {
 
       $('#getUnclJSON' ).click( function(){
         console.log( 'getJSONpajax clicked' );
-        var searchString = 'http://devjana.net/uncl/api';
+        var searchString = 'https://cms-staging.image-metrics.com/api/v3/lop/us/monolithic';
          $.ajax({
            url: searchString,
            dataType: "jsonp",
