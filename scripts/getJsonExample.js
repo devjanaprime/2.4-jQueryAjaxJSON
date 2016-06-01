@@ -47,7 +47,8 @@ $( function() {
             console.log( data );
             for( var i=0; i< data.response.docs.length; i++ ){
               var newElement = document.createElement('a');
-              newElement.setAttribute( data.response.docs[i].name, "https://archive.org/details/" + data.response.docs[i].identifier );
+              newElement.textContent = data.response.docs[i].name;
+              newElement.href= "https://archive.org/details/" + data.response.docs[i].identifier;
               $('body').append( newElement );
             }
 
