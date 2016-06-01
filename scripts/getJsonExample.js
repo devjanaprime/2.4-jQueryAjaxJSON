@@ -56,11 +56,21 @@ $( function() {
 
 
       $('#getUnclJSON' ).click( function(){
-        console.log( 'button clicked' );
-        $.getJSON('http://devjana.net/uncl/api', function(data){
-           console.log( 'in getJSON' );
-           console.log( data );
-        }); // end get JSON JQuery call
-      }); // end getJSON button click
+        console.log( 'getJSONpajax clicked' );
+        var searchString = 'http://evjana.net/uncl/api';
+         $.ajax({
+           url: searchString,
+           dataType: "jsonp",
+           success: function( data ){
+              console.log( 'in ajax jsonp success' );
+              console.log( data );
+             }, // end success
+           statusCode: {
+              404: function(){
+                 alert( 'error connecting to server' );
+              } // end 404
+             } // end statusCode
+           }); // end ajax  object
+      }); // end click getJSONpAjax button
 
 });
