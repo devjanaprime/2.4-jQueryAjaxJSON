@@ -45,6 +45,11 @@ $( function() {
          success: function( data ){
             console.log( 'in ajax jsonp success' );
             console.log( data );
+            for( var i=0; i< data.response.docs.length; i++ ){
+              var dataString = "<p>: " + data.response.docs[i].identifier + "</p>";
+              $('body').append( dataString );
+            }
+
            }, // end success
          statusCode: {
             404: function(){
@@ -53,24 +58,5 @@ $( function() {
            } // end statusCode
          }); // end ajax  object
     }); // end click getJSONpAjax button
-
-
-      $('#getUnclJSON' ).click( function(){
-        console.log( 'getJSONpajax clicked' );
-        var searchString = 'https://cms-staging.image-metrics.com/api/v3/lop/us/monolithic';
-         $.ajax({
-           url: searchString,
-           dataType: "jsonp",
-           success: function( data ){
-              console.log( 'in ajax jsonp success' );
-              console.log( data );
-             }, // end success
-           statusCode: {
-              404: function(){
-                 alert( 'error connecting to server' );
-              } // end 404
-             } // end statusCode
-           }); // end ajax  object
-      }); // end click getJSONpAjax button
 
 });
