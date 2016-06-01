@@ -46,8 +46,10 @@ $( function() {
             console.log( 'in ajax jsonp success' );
             console.log( data );
             for( var i=0; i< data.response.docs.length; i++ ){
-              var dataString = "<p>" + data.response.docs[i].identifier + "</p>";
-              $('body').append( dataString );
+              var newElement = document.createElement('a');
+              newElement.textContent = data.response.docs[i].name;
+              newElement.href= "https://archive.org/details/" + data.response.docs[i].identifier;
+              $('body').append( newElement );
             }
 
            }, // end success
