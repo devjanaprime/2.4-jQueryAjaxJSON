@@ -46,10 +46,12 @@ $( function() {
             console.log( 'in ajax jsonp success' );
             console.log( data );
             for( var i=0; i< data.response.docs.length; i++ ){
-              var newElement = document.createElement('a');
-              newElement.textContent = data.response.docs[i].title;
-              newElement.href= "https://archive.org/details/" + data.response.docs[i].identifier;
-              $('body').append( newElement );
+              var newParagraph = document.createElement('p');
+              var newLink = document.createElement('a');
+              newLink.textContent = data.response.docs[i].title;
+              newLink.href= "https://archive.org/details/" + data.response.docs[i].identifier;
+              newParagraph.appendChild( newLink );
+              $('body').append( newParagraph );
             }
 
            }, // end success
