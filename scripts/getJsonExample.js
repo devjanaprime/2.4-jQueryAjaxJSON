@@ -48,7 +48,7 @@ $( function() {
             for( var i=0; i< data.response.docs.length; i++ ){
               var newElement = document.createElement('a');
               newElement.setAttribute( data.response.docs[i].name, "https://archive.org/details/" + data.response.docs[i].identifier );
-              $('body').appendChild( newElement );
+              $('body').append( newElement );
             }
 
            }, // end success
