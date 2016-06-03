@@ -1,0 +1,84 @@
+{
+  "students": [
+    {
+      "first_name": "adam",
+      "last_name": "gothmann"
+    },
+    {
+      "first_name": "anna",
+      "last_name": "baker"
+    },
+    {
+      "first_name": "craig",
+      "last_name": "waldron"
+    },
+    {
+      "first_name": "gini",
+      "last_name": "tyson"
+    },
+    {
+      "first_name": "lanny",
+      "last_name": "maetzold"
+    },
+    {
+      "first_name": "meg",
+      "last_name": "culotta"
+    },
+    {
+      "first_name": "matthew",
+      "last_name": "crawford"
+    },
+    {
+      "first_name": "nick",
+      "last_name": "gorbunov"
+    },
+    {
+      "first_name": "pat",
+      "last_name": "may"
+    },
+    {
+      "first_name": "susan",
+      "last_name": "rehl"
+    },
+    {
+      "first_name": "ted",
+      "last_name": "karanikolas"
+    },
+    {
+      "first_name": "tracey",
+      "last_name": "zavadil"
+    },
+    {
+      "first_name": "bethany",
+      "last_name": "johnson"
+    },
+    {
+      "first_name": "eric",
+      "last_name": "anderson"
+    },
+    {
+      "first_name": "henry",
+      "last_name": "hall"
+    },
+    {
+      "first_name": "lukas",
+      "last_name": "udstuen"
+    },
+    {
+      "first_name": "mai",
+      "last_name": "lee"
+    },
+    {
+      "first_name": "nick",
+      "last_name": "wernimont"
+    },
+    {
+      "first_name": "oliver",
+      "last_name": "langmo"
+    },
+    {
+      "first_name": "sohpia",
+      "last_name": "benson"
+    }
+  ]
+}

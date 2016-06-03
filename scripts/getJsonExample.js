@@ -16,7 +16,7 @@ $( function() {
   $('#getJSONajax' ).click( function(){
     console.log( 'button clicked' );
      $.ajax({
-       url: './test.json',
+       url: 'students.json',
        dataType: 'json',
        success: function( data ){
           console.log( 'in ajax success' );
@@ -39,6 +39,7 @@ $( function() {
     $('#getJSONpajax' ).click( function(){
       console.log( 'getJSONpajax clicked' );
       var searchString = 'https://archive.org/advancedsearch.php?q=' + $('#searchField').val() + '&output=json';
+      // https://archive.org/advancedsearch.php?q=batman&output=json
        $.ajax({
          url: searchString,
          dataType: "jsonp",
