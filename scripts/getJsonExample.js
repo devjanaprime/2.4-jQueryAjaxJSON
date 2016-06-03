@@ -7,7 +7,7 @@ $( function() {
 
   $('#getJSON' ).click( function(){
     console.log( 'button clicked' );
-    $.getJSON('./test.json', function(data){
+    $.getJSON('./students.json', function(data){
        console.log( 'in getJSON' );
        console.log( data );
     }); // end get JSON JQuery call
@@ -21,8 +21,6 @@ $( function() {
        success: function( data ){
           console.log( 'in ajax success' );
           console.log( data );
-          var dataString = "<p>Name: " + data.name + "</p>";
-          $('body').append( dataString );
          }, // end success
        statusCode: {
           404: function(){
