@@ -16,7 +16,7 @@ $( function() {
   $('#getJSONajax' ).click( function(){
     console.log( 'button clicked' );
      $.ajax({
-       url: 'students.json',
+       url: 'https://raw.githubusercontent.com/devjanaprime/2.4-jQueryAjaxJSON/gh-pages/students.json',
        dataType: 'json',
        success: function( data ){
           console.log( 'in ajax success' );
